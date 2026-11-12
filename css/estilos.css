@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+#caixa {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8);
+    border-radius: 50%;
+    margin-top: 70px;
+    animation: efeitoRGB 3s linear infinite;
+}
+
+.bolaPular {
+    animation: pulo 1s infinite, efeitoRGB 1.5s linear infinite !important;
+}
+
+@keyframes efeitoRGB {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes pulo {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
